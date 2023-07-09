@@ -1,6 +1,6 @@
 // iris_left.overlay
 
-#include "iris.dtsi" // Notice that the main dtsi files are included in the overlay.
+#include "schplit.dtsi" // Notice that the main dtsi files are included in the overlay.
 
 &kscan0 {
     col-gpios
