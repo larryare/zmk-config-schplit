@@ -1,0 +1,17 @@
+// iris_right.overlay
+
+#include "iris.dtsi"
+
+&default_transform { // The matrix transform for this board is 6 columns over because the left half is 6 columns wide according to the matrix.
+    col-offset = <5>;
+};
+
+&kscan0 {
+    col-gpios
+        = <&xiao_d 8 GPIO_ACTIVE_HIGH> // col1 in the schematic
+        , <&xiao_d 7 GPIO_ACTIVE_HIGH> // col2 in the schematic
+        , <&xiao_d 6 GPIO_ACTIVE_HIGH> // col3 in the schematic
+        , <&xiao_d 5 GPIO_ACTIVE_HIGH> // col4 in the schematic
+        , <&xiao_d 4 GPIO_ACTIVE_HIGH> // col5 in the schematic
+        ;
+};
