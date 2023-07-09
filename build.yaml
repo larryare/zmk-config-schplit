@@ -14,4 +14,4 @@
 ---
 include:
   - board: seeeduino_xiao_ble
-    shield: schplit
+    shield: [ "schplit_left", "schplit_right" ]
