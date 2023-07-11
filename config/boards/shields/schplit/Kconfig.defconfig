@@ -9,9 +9,6 @@ config ZMK_SPLIT_ROLE_CENTRAL
 config BOARD_ENABLE_DCDC
     default y
 
-config BT_CTLR
-    default BT_CTLR
-
 config ZMK_USB
     default y
 
