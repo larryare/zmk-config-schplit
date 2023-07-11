@@ -23,7 +23,7 @@
     &kp Z    &kp X    &kp C     &kp V     &kp B                               &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH
                                 &kp LSHIFT      &lt LOWER ENTER          &kp SPACE  &kp RGUI
             >;
-        sensor-bindings = <C_MUTE C_VOL_UP C_VOL_DN C_PP C_NEXT C_PREV>;
+        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_NEXT C_PREV>;
 
         };
 
