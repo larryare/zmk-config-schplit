@@ -1,5 +1,11 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+#define DEFAULT 0
+#define LOWER   1
+#define RAISE   2
+
 
 / {
     keymap {
@@ -15,10 +21,24 @@
     &kp Q    &kp W    &kp E     &kp R     &kp T                               &kp Y     &kp U     &kp I     &kp O     &kp P
     &kp A    &kp S    &kp D     &kp F     &kp G                               &kp H     &kp J     &kp K     &kp L     &kp BSPC
     &kp Z    &kp X    &kp C     &kp V     &kp B                               &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH
-                                &kp LSHIFT      &kp ENTER          &kp SPACE  &kp RGUI
+                                &kp LSHIFT      &lt LOWER ENTER          &kp SPACE  &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+
+        lower_layer {
+// -----------------------------------------------------------------------------------------
+// | SW5  | SW4  | SW3  | SW2  | SW1  |                 | SW1  | SW2  | SW3  | SW4  | SW5  |
+// | SW10 | SW9  | SW8  | SW7  | SW6  |                 | SW6  | SW7  | SW8  | SW9  | SW10 |
+// | SW15 | SW14 | SW13 | SW12 | SW11 |                 | SW11 | SW12 | SW13 | SW14 | SW15 |
+//                      | SW17 | SW16 |                 | SW16 | SW17 |
+            bindings = <
+    &bt BT_CLR    &bt BT_PRV    &bt BT_NXT     &kp R     &kp T                               &kp Y     &kp U     &kp I     &kp O     &kp P
+    &kp N1    &kp N2    &kp N3     &kp N4     &kp N5                               &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
+    &kp LC(Z)    &kp LC(X)    &kp LC(C)     &kp LC(V)     &kp B                               &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH
+                                &kp LSHIFT      &kp ENTER          &kp SPACE  &kp RGUI
+            >;
         };
     };
 };
