@@ -8,10 +8,10 @@
 
 &kscan0 {
     col-gpios
-        = <&xiao_d 8 (GPIO_ACTIVE_HIGH | PIO_PULL_DOWN)> // col1 in the schematic
-        , <&xiao_d 7 (GPIO_ACTIVE_HIGH | PIO_PULL_DOWN)> // col2 in the schematic
-        , <&xiao_d 6 (GPIO_ACTIVE_HIGH | PIO_PULL_DOWN)> // col3 in the schematic
-        , <&xiao_d 5 (GPIO_ACTIVE_HIGH | PIO_PULL_DOWN)> // col4 in the schematic
-        , <&xiao_d 4 (GPIO_ACTIVE_HIGH | PIO_PULL_DOWN)> // col5 in the schematic
+        = <&xiao_d 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // col1 in the schematic
+        , <&xiao_d 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // col2 in the schematic
+        , <&xiao_d 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // col3 in the schematic
+        , <&xiao_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // col4 in the schematic
+        , <&xiao_d 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // col5 in the schematic
         ;
 };
