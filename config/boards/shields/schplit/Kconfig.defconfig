@@ -6,16 +6,6 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
-config BOARD_ENABLE_DCDC
-    default y
-
-config ZMK_USB_LOGGING
-    default y
-
-config ZMK_USB
-    default y
-
-
 endif
 
 if SHIELD_SCHPLIT_LEFT || SHIELD_SCHPLIT_RIGHT
