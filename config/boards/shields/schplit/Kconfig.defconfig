@@ -9,8 +9,12 @@ config ZMK_SPLIT_ROLE_CENTRAL
 config BOARD_ENABLE_DCDC
     default y
 
+config ZMK_USB_LOGGING
+    default y
+
 config ZMK_USB
     default y
+
 
 endif
 
