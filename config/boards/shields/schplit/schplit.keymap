@@ -23,7 +23,7 @@
     &kp Z    &kp X    &kp C     &kp V     &kp B                               &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH
                                 &kp LSHIFT      &lt LOWER ENTER          &kp SPACE  &kp RGUI
             >;
-        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        sensor-bindings = <C_MUTE C_VOL_UP C_VOL_DN C_PP C_NEXT C_PREV>;
 
         };
 
@@ -37,7 +37,7 @@
     &bt BT_CLR    &bt BT_PRV    &bt BT_NXT     &kp R     &bootloader                               &kp Y     &kp U     &kp I     &kp O     &bootloader
     &kp N1    &kp N2    &kp N3     &kp N4     &kp N5                               &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
     &kp LC(Z)    &kp LC(X)    &kp LC(C)     &kp LC(V)     &kp B                               &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH
-                                &kp LSHIFT      &kp ENTER          &kp SPACE  &kp RGUI
+                                &kp C      &kp ENTER          &kp SPACE  &kp RGUI
             >;
         };
     };

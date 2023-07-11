@@ -15,3 +15,7 @@
         , <&xiao_d 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // col5 in the schematic
         ;
 };
+
+&right_encoder {
+    status = "okay";
+};
