@@ -39,23 +39,24 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4)                 RC(2,5) RC(2,6) RC(2,7) 
      left_encoder: encoder_left {
         compatible = "alps,ec11";
         label = "LEFT_ENCODER";
-        a-gpios = <&xiao_d 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&xiao_d 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        steps = <24>;
+        a-gpios = <&xiao_d 10 (GPIO_ACTIVE_LOW | GPIO_PULL_DOWN)>;
+        b-gpios = <&xiao_d 9 (GPIO_ACTIVE_LOW | GPIO_PULL_DOWN)>;
+        steps = <96>;
         status = "disabled";
     };
 
     right_encoder: encoder_right {
         compatible = "alps,ec11";
         label = "RIGHT_ENCODER";
-        a-gpios = <&xiao_d 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&xiao_d 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        steps = <24>;
+        a-gpios = <&xiao_d 10 (GPIO_ACTIVE_LOW | GPIO_PULL_DOWN)>;
+        b-gpios = <&xiao_d 9 (GPIO_ACTIVE_LOW | GPIO_PULL_DOWN)>;
+        steps = <96>;
         status = "disabled";
     };
 
     sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&left_encoder &right_encoder>;
+        triggers-per-rotation = <20>;
     };
 };
