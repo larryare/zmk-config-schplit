@@ -5,6 +5,7 @@
 #define DEFAULT 0
 #define LOWER   1
 #define RAISE   2
+#define ADJUST 3
 
 
 / {
@@ -21,9 +22,25 @@
     &kp Q    &kp W    &kp E     &kp R     &kp T                               &kp Y     &kp U     &kp I     &kp O     &kp P
     &kp A    &kp S    &kp D     &kp F     &kp G                               &kp H     &kp J     &kp K     &kp L     &kp BSPC
     &kp Z    &kp X    &kp C     &kp V     &kp B                               &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH
-                      &kp C_MUTE  &kp LSHIFT      &lt LOWER ENTER          &kp SPACE  &kp RGUI      &kp C_PP
+                      &kp C_MUTE  &kp LSHIFT      &lt LOWER ENTER          &mt LCTRL SPACE  &lt RAISE RGUI      &kp C_PP
             >;
         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_NEXT C_PREV>;
+
+        };
+
+        raise_layer {
+// ------------------------------------                                                     ------------------------------------
+// | !  | @  | #  | $  | %  |                                                               |  ^  |  &  |  *  | (  | )  |
+// | SW10 | SW9  | SW8  | SW7  | SW6  |                                                     | -  | =  | ~ | [  | ] |
+// | SW15 | SW14 | SW13 | SW12 | SW11 |                                                     | _ | + | "|" | { | } |
+//               | ENC  | SW17 | SW16 |                                                     | SW16 | SW17 | ENC  |
+            bindings = <
+    &kp ESC    &kp EXCL    &kp AT     &kp HASH     &kp DLLR                               &kp CARET     &kp AMPS     &kp KP_MULTIPLY     &kp LPAR     &kp RPAR
+    &kp TAB    &kp LEFT    &kp UP     &kp RIGHT     &trans                               &kp MINUS     &kp EQUAL     &kp TILDE      &kp LBKT     &kp RBKT
+    &trans   &kp DOWN    &trans     &trans     &trans                               &kp UNDER     &kp PLUS     &kp PIPE &kp LBRC   &kp RBRC
+                           &kp C_MUTE   &kp LSHIFT   &kp LALT                        &mt LCTRL SPACE    &lt RAISE RGUI      &kp C_PP
+            >;
+        sensor-bindings = <&inc_dec_kp LC(TAB) S(LC(TAB)) &inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
 
         };
 
@@ -34,11 +51,27 @@
 // | SW15 | SW14 | SW13 | SW12 | SW11 |                 | SW11 | SW12 | SW13 | SW14 | SW15 |
 //                      | SW17 | SW16 |                 | SW16 | SW17 |
             bindings = <
-    &bt BT_CLR    &bt BT_PRV    &bt BT_NXT     &kp R     &bootloader                               &kp Y     &kp U     &kp I     &kp O     &bootloader
+    &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                               &kp Y     &kp U     &kp I     &kp O     &bootloader
     &kp N1    &kp N2    &kp N3     &kp N4     &kp N5                               &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
-    &kp LC(Z)    &kp LC(X)    &kp LC(C)     &kp LC(V)     &kp B                               &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH
+    &bt BT_CLR    &bootloader    &trans     &trans     &trans                               &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH
                                 &kp C      &kp ENTER          &kp SPACE  &kp RGUI
             >;
         };
     };
+
+//        TEMPLATE_layer {
+// ------------------------------------                                                     ------------------------------------
+// | SW5  | SW4  | SW3  | SW2  | SW1  |                                                     | SW1  | SW2  | SW3  | SW4  | SW5  |
+// | SW10 | SW9  | SW8  | SW7  | SW6  |                                                     | SW6  | SW7  | SW8  | SW9  | SW10 |
+// | SW15 | SW14 | SW13 | SW12 | SW11 |                                                     | SW11 | SW12 | SW13 | SW14 | SW15 |
+//               | ENC  | SW17 | SW16 |                                                     | SW16 | SW17 | ENC  |
+//            bindings = <
+//    &kp ESC    &trans    &trans     &trans     &trans                               &trans     &trans     &trans     &trans     &trans
+//    &kp TAB    &trans    &trans     &trans     &trans                               &trans     &trans     &trans     &trans     &trans
+//    &trans   &trans    &trans     &trans     &trans                               &trans     &trans     &trans &trans   &kp FSLH
+//                           &kp C_MUTE   &kp LSHIFT   &lt LOWER ENTER                        &kp SPACE    &lt RAISE RGUI      &kp C_PP
+//            >;
+//       sensor-bindings = <&inc_dec_kp TRNS TRNS &inc_dec_kp TRNS TRNS>;
+//
+//        };
 };
