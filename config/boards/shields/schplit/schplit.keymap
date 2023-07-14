@@ -37,7 +37,7 @@
             bindings = <
     &kp ESC    &kp EXCL    &kp AT     &kp HASH     &kp DLLR                               &kp CARET     &kp AMPS     &kp KP_MULTIPLY     &kp LPAR     &kp RPAR
     &kp TAB    &kp LEFT    &kp UP     &kp RIGHT     &trans                               &kp MINUS     &kp EQUAL     &kp TILDE      &kp LBKT     &kp RBKT
-    &trans   &kp DOWN    &trans     &trans     &kp PSCRN                               &kp UNDER     &kp PLUS     &kp PIPE &kp LBRC   &kp RBRC
+    &trans   &trans    &kp DOWN     &LATL     &kp PSCRN                               &kp UNDER     &kp PLUS     &kp PIPE &kp LBRC   &kp RBRC
                            &kp C_MUTE   &kp LSHIFT   &kp LALT                        &mt LCTRL SPACE    &lt RAISE RGUI      &kp C_PP
             >;
         sensor-bindings = <&inc_dec_kp LC(TAB) LS(LC(TAB)) &inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
