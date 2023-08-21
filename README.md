@@ -1,6 +1,6 @@
 # zmk-config-schplit
 
-This is my custom handwired split keeb.
+This is my custom handwired wireless split keeb.
 
 Split + cheap + shit = schplit.
 
