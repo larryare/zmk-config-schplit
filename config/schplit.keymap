@@ -47,10 +47,10 @@
             //               | ENC  | SW17 | SW16 |                                                     | SW16 | SW17 | ENC  |
 
             bindings = <
-&kp EXCL  &kp AT     &kp HASH    &kp DLLR    &kp PRCNT    &kp CARET  &kp AMPS        &kp KP_MULTIPLY  &kp LPAR  &kp RPAR
-&kp TAB   &kp LEFT   &kp UP      &kp RIGHT   &kp DQT      &kp MINUS  &kp EQUAL       &kp TILDE        &kp LBKT  &kp RBKT
-&kp ESC   &kp GRAVE  &kp DOWN    &kp LALT    &kp PSCRN    &kp UNDER  &kp PLUS        &kp PIPE         &kp LBRC  &kp RBRC
-                     &kp C_MUTE  &kp LSHIFT  &kp LALT     &kp SPACE  &lt RAISE RGUI  &kp C_PP
+&kp EXCL  &kp AT     &kp HASH    &kp DLLR    &kp PRCNT    &kp CARET    &kp AMPS        &kp KP_MULTIPLY  &kp LPAR  &kp RPAR
+&kp TAB   &kp LEFT   &kp UP      &kp RIGHT   &kp DQT      &kp MINUS    &kp EQUAL       &kp TILDE        &kp LBKT  &kp RBKT
+&kp ESC   &kp GRAVE  &kp DOWN    &kp LALT    &kp PSCRN    &kp UNDER    &kp PLUS        &kp PIPE         &kp LBRC  &kp RBRC
+                     &kp C_MUTE  &kp LSHIFT  &kp LALT     &lt 3 SPACE  &lt RAISE RGUI  &kp C_PP
             >;
 
             sensor-bindings =
