@@ -89,10 +89,10 @@
 
         mid_row {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans     &trans  &trans  &trans  &trans
-&kp A   &kp S   &kp D   &kp F   &kp G     &kp H      &kp J   &kp K   &kp L   &kp BSPC
-&trans  &trans  &trans  &trans  &trans    &trans     &trans  &trans  &trans  &trans
-                &trans  &trans  &trans    &kp LCTRL  &trans  &trans
+&trans     &trans     &trans     &trans     &trans       &trans     &trans     &trans     &trans     &trans
+&kp LC(A)  &kp LC(S)  &kp LC(D)  &kp LC(F)  &kp LC(G)    &kp LC(H)  &kp LC(J)  &kp LC(K)  &kp LC(L)  &kp BSPC
+&trans     &trans     &trans     &trans     &trans       &trans     &trans     &trans     &trans     &trans
+                      &trans     &trans     &trans       &kp LCTRL  &trans     &trans
             >;
         };
     };
