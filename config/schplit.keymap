@@ -66,15 +66,24 @@
             //                 | ENC  | SW17 | SW16 |                                                                   | SW16          | SW17  | ENC   | 
 
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans            &trans  &trans  &trans  &trans
-&kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6            &kp N7  &kp N8  &kp N9  &kp N0
-&bt BT_CLR    &trans        &trans        &trans        &bootloader     &bootloader       &trans  &trans  &trans  &kp SEMI
-                            &trans        &trans        &kp RALT        &kp LEFT_CONTROL  &trans  &trans
+&trans  &trans  &trans  &trans  &trans      &trans            &trans  &trans  &trans  &trans
+&kp N1  &kp N2  &kp N3  &kp N4  &kp N5      &kp N6            &kp N7  &kp N8  &kp N9  &kp N0
+&trans  &trans  &trans  &trans  &trans      &trans            &trans  &trans  &trans  &kp SEMI
+                &trans  &trans  &kp RALT    &kp LEFT_CONTROL  &trans  &trans
             >;
 
             sensor-bindings = <
                 &inc_dec_kp LC(TAB) LS(LC(TAB))
                 &inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN
+            >;
+        };
+
+        control {
+            bindings = <
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans       &trans  &trans  &trans  &trans
+&trans        &trans        &trans        &trans        &trans          &trans       &trans  &trans  &trans  &trans
+&bt BT_CLR    &trans        &trans        &trans        &bootloader     &bootloader  &trans  &trans  &trans  &trans
+                            &trans        &trans        &trans          &trans       &trans  &trans
             >;
         };
     };
